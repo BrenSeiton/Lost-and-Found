@@ -19,6 +19,7 @@
   "dependencies": {
     "bcryptjs": "^3.0.3",
     "express.js": "^1.0.0",
+    "mysql2": "^3.16.0",
     "sequelize": "^6.37.7",
     "sqlite3": "^5.1.7"
   }
