@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <title>Campus Lost &amp; Found – User Dashboard</title>
     <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="/css/user-dashboard.css" />
   </head>
   <body>
     <div class="app-shell">
@@ -41,7 +42,7 @@
                       class="input"
                       placeholder="Search items (type, color, location, station)..."
                     />
-                    <div class="actions-row" style="justify-content:flex-start;margin-top:8px;">
+                    <div class="actions-row search-actions">
                       <button id="searchBtn" class="button button-primary" type="button">
                         Search
                       </button>
@@ -50,7 +51,7 @@
                       </button>
                     </div>
 
-                    <div style="margin-top:10px;">
+                    <div class="match-strictness">
                       <label class="field-label">Match strictness for suggestions</label>
                       <select id="matchStrictness" class="select">
                         <option value="low">Low – more suggestions</option>
@@ -61,12 +62,12 @@
                   </div>
                 </div>
 
-                <div class="summary-card" style="margin-top:16px;">
+                <div class="summary-card summary-card-margin">
                   <div class="summary-title">Recently found items</div>
                   <div id="foundItems"></div>
                 </div>
 
-                <div class="summary-card" style="margin-top:16px;">
+                <div class="summary-card summary-card-margin">
                   <div class="summary-title">Possible matches for your lost reports</div>
                   <div id="matchItems"></div>
                 </div>
@@ -74,7 +75,7 @@
 
               <section>
                 <div class="form-card">
-                  <h3 class="page-title" style="font-size:16px;margin-bottom:10px;">
+                  <h3 class="page-title report-title">
                     Report a lost item
                   </h3>
                   <form id="lostForm" class="form-grid">

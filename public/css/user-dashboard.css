@@ -1,0 +1,19 @@
+/* User Dashboard Specific Styles */
+
+.search-actions {
+  justify-content: flex-start;
+  margin-top: 8px;
+}
+
+.match-strictness {
+  margin-top: 10px;
+}
+
+.summary-card-margin {
+  margin-top: 16px;
+}
+
+.report-title {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
