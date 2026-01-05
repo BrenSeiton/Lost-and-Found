@@ -17,6 +17,7 @@
   "homepage": "https://github.com/BrenSeiton/Lost-and-Found#readme",
   "description": "",
   "dependencies": {
+    "bcryptjs": "^3.0.3",
     "express.js": "^1.0.0"
   }
 }
