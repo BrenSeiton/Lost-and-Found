@@ -1,0 +1,81 @@
+/* Admin Dashboard Specific Styles */
+
+.admin-dashboard {
+  /* Add any overarching styles for the admin dashboard */
+}
+
+.admin-header {
+  background: var(--bg-card);
+  padding: 20px;
+  border-radius: var(--radius-lg);
+  margin-bottom: 20px;
+}
+
+.admin-content {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 20px;
+}
+
+.admin-sidebar {
+  background: var(--bg-card);
+  padding: 20px;
+  border-radius: var(--radius-lg);
+}
+
+.admin-main {
+  background: var(--bg-card);
+  padding: 20px;
+  border-radius: var(--radius-lg);
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.admin-table th {
+  background: var(--accent-soft);
+  color: var(--text-main);
+}
+
+.admin-button {
+  background: var(--accent);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--radius-lg);
+  cursor: pointer;
+  transition: var(--transition-fast);
+}
+
+.admin-button:hover {
+  background: #2563eb;
+}
+
+.admin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.admin-input {
+  padding: 10px;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  background: var(--bg);
+  color: var(--text-main);
+}
+
+.admin-input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
