@@ -56,8 +56,6 @@
                     </button>
                   </div>
                 </form>
-                
-                <!-- Register link below login form -->
                 <div class="register-link">
                   <p>Not a member? <a href="#" id="showRegisterForm" class="register-link-text">Register here</a></p>
                 </div>
@@ -97,7 +95,6 @@
       </div>
     </div>
 
-    <!-- Registration Modal -->
     <div id="registerModal" class="modal">
       <div class="modal-content">
         <div class="modal-header">
@@ -160,7 +157,6 @@
     </div>
 
     <script>
-      // Original login function - unchanged
       document.getElementById("userLoginForm").addEventListener("submit", async (e) => {
         e.preventDefault();
         const body = {
@@ -181,7 +177,6 @@
         }
       });
 
-      // Original admin login function - unchanged
       document.getElementById("adminLoginForm").addEventListener("submit", async (e) => {
         e.preventDefault();
         const body = {
@@ -202,7 +197,6 @@
         }
       });
 
-      // Original register function - unchanged
       document.getElementById("registerForm").addEventListener("submit", async (e) => {
         e.preventDefault();
         const body = {
@@ -226,7 +220,6 @@
         }
       });
 
-      // Modal functionality
       const registerModal = document.getElementById('registerModal');
       const showRegisterForm = document.getElementById('showRegisterForm');
       const closeButtons = document.querySelectorAll('.modal-close');
@@ -248,7 +241,6 @@
         document.getElementById('regPassword').value = '';
       }
 
-      // Event listeners for modal
       showRegisterForm.addEventListener('click', (e) => {
         e.preventDefault();
         openModal();
@@ -262,7 +254,6 @@
         });
       });
 
-      // Close modal when clicking outside
       registerModal.addEventListener('click', (e) => {
         if (e.target === registerModal) {
           closeModal();
@@ -270,7 +261,6 @@
         }
       });
 
-      // Close modal with Escape key
       document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && registerModal.classList.contains('active')) {
           closeModal();

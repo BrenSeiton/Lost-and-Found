@@ -5,9 +5,9 @@ async function createAdmin() {
     try {
         await sequelize.authenticate();
 
-        const username = "admin1";         // change if you like
-        const fullName = "Main Admin";     // change if you like
-        const plainPassword = "admin123";  // change to whatever password you want
+        const username = "admin1";
+        const fullName = "Main Admin";
+        const plainPassword = "admin123";
 
         const passwordHash = await bcrypt.hash(plainPassword, 10);
 

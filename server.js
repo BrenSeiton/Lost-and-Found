@@ -56,7 +56,6 @@ app.post("/login", async (req, res) => {
   }
 });
 
-// Admin login (by username)
 app.post("/admin-login", async (req, res) => {
   try {
     const { username, password } = req.body;
@@ -83,15 +82,6 @@ app.post("/users", async (req, res) => {
     res.status(400).json({ error: e.message });
   }
 });
-
-// app.post("/admins", async (req, res) => {
-//   try {
-//     const admin = await Admin.create(req.body);
-//     res.json(admin);
-//   } catch (e) {
-//     res.status(400).json({ error: e.message });
-//   }
-// });
 
 app.post("/found-items", async (req, res) => {
   try {
@@ -147,7 +137,6 @@ app.get("/found-items", async (req, res) => {
   }
 });
 
-// Mark found item as claimed
 app.post("/found-items/:id/claim", async (req, res) => {
   try {
     const item = await FoundItem.findByPk(req.params.id);
@@ -205,7 +194,6 @@ app.get("/lost-items", async (req, res) => {
   }
 });
 
-// Admin view of recent lost reports
 app.get("/admin-lost-items", async (req, res) => {
   try {
     const items = await LostItem.findAll({
@@ -219,12 +207,10 @@ app.get("/admin-lost-items", async (req, res) => {
   }
 });
 
-// Lost reports for a specific user (for dashboard matching)
 app.get("/my-lost-items", async (req, res) => {
   try {
     const userId = req.query.userId;
     if (!userId) {
-      // no user, just return empty list
       return res.json([]);
     }
     const items = await LostItem.findAll({
